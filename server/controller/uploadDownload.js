@@ -76,7 +76,7 @@ exports.getFile = {
             ext = file.substr(file.lastIndexOf('.') + 1);
         fs.readFile(path, function(error, content) {
             if (error) return reply("file not found");
-            var contentType;
+            var contentType="application/oct-stream";
             switch (ext) {
                 case "pdf":
                     contentType = 'application/pdf';
